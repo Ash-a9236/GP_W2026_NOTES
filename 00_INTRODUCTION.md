@@ -271,5 +271,31 @@ var direction = heading / distance; // normalized vector
 
 <br>
 
+The dot product is a <span style="color: var(--highlight)">float (or scalar) value</span> measuring how much two vectors point in the same direction. It <span style="color: var(--highlight)">multiplies the magnitude of both vectors together with the cosine of their angle</span>. The closer the dot product is to 1, the more the two vectors point in the same direction.
+
+> formula for the dot product : $a * b = |a| * |b| * cos(\theta)$ OR $a * b = (a_x * b_x) + (a_y * b_y)$
+> To find the angle of two given vectors by with the dot product formula : $\theta = arccos(\frac{(a * b)}{(|a| * |b|)})$
+
+Remember that if the dot product is equal to : 
+
+| RESULT | MEANING                                                                               | 
+|--------|---------------------------------------------------------------------------------------|
+| 1      | They are in the exact same directions : they are parallel (since $cos(0\degree) = 1$) |
+| 0      | The two vectors are perpendicular ($90\degree$) (since $cos(90\degree) = 0$)          |
+| -1     | The two vectors are going in opposite directions                                      |
+
+In C#, you can use the ```.Dot``` method
+
+```csharp
+using UnityEngine;
+
+Vector2 vector1 = new Vector2(4, 7);
+Vector2 vector2 = new Vector2(4, 7);
+Vector2 vector3 = new Vector2(4, 7);
 
 
+```
+ 
+ 
+ 
+ 
